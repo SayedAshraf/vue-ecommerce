@@ -1,6 +1,5 @@
 <template>
   <div id="Admin-content-body" :class="{ showNav: NavVisibilityFun }">
-    <h1>Admin page</h1>
     <AdminHeader />
     <router-view />
   </div>
@@ -24,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss">
-#Admin-content-body {
-  font-family: "Josefin Sans", sans-serif;
+body {
+  padding-left: 40px;
 }
 </style>

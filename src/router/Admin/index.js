@@ -5,18 +5,18 @@ import Categories from "../../views/Admin/Categories/index";
 export default [
   {
     path: "/admin",
-    name: "Admin",
+    name: "admin",
     component: Admin,
 
     //Nested Routes This is a child of Admin Route
     children: [
       {
-        name: "Products",
+        name: "products",
         path: "/products",
         component: Products,
       },
       {
-        name: "Categories",
+        name: "categories",
         path: "/categories",
         component: Categories,
       },

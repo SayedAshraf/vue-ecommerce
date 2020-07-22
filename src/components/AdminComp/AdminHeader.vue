@@ -9,13 +9,13 @@
     </button>
     <nav class="header-nav">
       <ul class="header-list">
-        <li class="list-item">
+        <li class="list-item" :class="{ active: $route.name == 'admin' }">
           <router-link to="/admin"> Home </router-link>
         </li>
-        <li class="list-item">
+        <li class="list-item" :class="{ active: $route.name == 'products' }">
           <router-link to="/products"> Products </router-link>
         </li>
-        <li class="list-item">
+        <li class="list-item" :class="{ active: $route.name == 'categories' }">
           <router-link to="/categories"> Categories </router-link>
         </li>
       </ul>
@@ -29,6 +29,7 @@ export default {
   data: function() {
     return {
       changeIcon: true,
+      active: "",
     };
   },
   computed: {
@@ -55,9 +56,11 @@ export default {
 $AdminHeaderWidth: 200px;
 
 #Admin-content-body {
+  font-family: "Josefin Sans", sans-serif;
   transition: padding-left 0.4s;
+  padding: 40px 20px 0;
   &.showNav {
-    padding-left: $AdminHeaderWidth;
+    padding-left: $AdminHeaderWidth + 20px;
   }
 }
 
@@ -129,6 +132,9 @@ $AdminHeaderWidth: 200px;
           &:hover {
             background-color: black;
           }
+        }
+        &.active {
+          background-color: black;
         }
       }
     }
